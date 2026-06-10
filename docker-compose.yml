@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  auditor:
+    build: .
+    volumes:
+      - ./database:/app/database
+      - ./reports:/app/reports
+    command: ["--target", "google.com", "--porta", "443"]
